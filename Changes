@@ -1,3 +1,8 @@
+2005-01-05 12:28  jonathan
+
+	* Changes, MANIFEST, Makefile.PL, README, Screen.pm, test.pl: Added
+	  Changes
+
 2005-01-05 12:20  jonathan
 
 	* MANIFEST, Makefile.PL, README, Screen.pm, test.pl: * Apply Stty
