@@ -1,4 +1,4 @@
-# $Id: Screen.pm,v 1.03 2005/01/05 12:20:00 jonathan Exp $
+# $Id: Screen.pm,v 1.4 2005/01/05 12:28:30 jonathan Exp $
 
 package Term::Screen;
 
@@ -6,7 +6,7 @@ use strict;
 
 use vars qw($VERSION);
 
-$VERSION = '1.02';
+$VERSION = '1.03';
 
 =head1 NAME
 

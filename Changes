@@ -1,0 +1,10 @@
+2005-01-05 12:20  jonathan
+
+	* MANIFEST, Makefile.PL, README, Screen.pm, test.pl: * Apply Stty
+	  patch for solaris from kevins@bmrb.co.uk
+
+2004-03-02 20:28  jonathan
+
+	* MANIFEST, Makefile.PL, README, Screen.pm, test.pl: Put back in
+	  CVS
+
