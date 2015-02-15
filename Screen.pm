@@ -644,6 +644,10 @@ __END__
 
 =back
 
+=head1 REPOSITORY
+
+L<https://github.com/jonathanstowe/Term-Screen>
+
 =head1 AUTHOR
 
 Term::Screen.pm by Mark Kaehny (kaehny@execpc.com)

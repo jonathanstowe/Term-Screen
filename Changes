@@ -2,6 +2,7 @@ Revision history for Perl module Term::Screen
 
 1.04 2015-02-?? JSTOWE
     - Reformatted this file as per CPAN::Changes::Spec
+    - Added github repo to metadata and pod
 
 1.03 2005-01-05 JSTOWE
     - Added Changes
