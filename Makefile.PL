@@ -8,8 +8,12 @@ if ($mm_ver =~ /_/) { # developer release?
 
 WriteMakefile(
     'NAME'		=> 'Term::Screen',
-    'VERSION_FROM'	=> 'Screen.pm', 
-    'PREREQ_PM'      => { Term::Cap => 0 },
+    'VERSION_FROM'	=> 'lib/Term/Screen.pm', 
+    'PREREQ_PM'      => {
+        'Term::Cap' => 0,
+        'strict'    => 0,
+        'warnings'  => 0,
+    },
 
     ($mm_ver <= 6.45
         ? ()
