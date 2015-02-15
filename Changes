@@ -2,6 +2,7 @@ Revision history for Perl module Term::Screen
 
 1.04 2015-02-?? JSTOWE
     - Now use strict and warnings, and drop use of vars.
+    - Specified min version of perl in code and metadata
     - Moved Screen.pm to lib/Term/Screen.pm as per convention
     - Reformatted this file as per CPAN::Changes::Spec
     - Added github repo to metadata and pod
