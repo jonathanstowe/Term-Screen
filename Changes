@@ -8,8 +8,8 @@ Revision history for Perl module Term::Screen
 
 1.03 2005-01-05 JSTOWE
     - Added Changes
-	- Apply Stty patch for solaris from kevins@bmrb.co.uk
-	- Put back in CVS
+    - Apply Stty patch for solaris from kevins@bmrb.co.uk
+    - Put back in CVS
 
 1.02 2002-09-28 JSTOWE
     - Unknown changes
