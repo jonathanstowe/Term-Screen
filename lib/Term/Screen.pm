@@ -2,11 +2,11 @@
 
 package Term::Screen;
 
+use 5.006;
 use strict;
+use warnings;
 
-use vars qw($VERSION);
-
-$VERSION = '1.03';
+our $VERSION = '1.04';
 
 =head1 NAME
 
@@ -364,7 +364,10 @@ Insert character option is available.
 
 sub ic_exists { ( exists( $_[0]->term()->{'ic'} ) ? 1 : 0 ); }
 
-*exists_ic = \&ic_exists;
+{
+    no warnings 'once';
+    *exists_ic = \&ic_exists;
+}
 
 =item ic()    
 
@@ -387,7 +390,10 @@ Delete char option exists and is available.
 
 sub dc_exists { ( exists( $_[0]->term()->{'dc'} ) ? 1 : 0 ); }
 
-*exists_dc = \&dc_exists;
+{
+    no warnings 'once';
+    *exists_dc = \&dc_exists;
+}
 
 =item dc()           
 
@@ -643,6 +649,10 @@ sub get_fn_keys
 __END__
 
 =back
+
+=head1 REPOSITORY
+
+L<https://github.com/jonathanstowe/Term-Screen>
 
 =head1 AUTHOR
 

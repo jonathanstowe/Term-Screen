@@ -1,6 +1,6 @@
 MANIFEST
 README
-Screen.pm
+lib/Term/Screen.pm
 Makefile.PL
 test.pl
 Changes

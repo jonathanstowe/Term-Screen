@@ -1,15 +1,20 @@
-2005-01-05 12:28  jonathan
+Revision history for Perl module Term::Screen
 
-	* Changes, MANIFEST, Makefile.PL, README, Screen.pm, test.pl: Added
-	  Changes
+1.04 2015-02-?? JSTOWE
+    - Now use strict and warnings, and drop use of vars.
+    - Specified min version of perl in code and metadata
+    - Moved Screen.pm to lib/Term/Screen.pm as per convention
+    - Reformatted this file as per CPAN::Changes::Spec
+    - Added github repo to metadata and pod
 
-2005-01-05 12:20  jonathan
+1.03 2005-01-05 JSTOWE
+    - Added Changes
+    - Apply Stty patch for solaris from kevins@bmrb.co.uk
+    - Put back in CVS
 
-	* MANIFEST, Makefile.PL, README, Screen.pm, test.pl: * Apply Stty
-	  patch for solaris from kevins@bmrb.co.uk
+1.02 2002-09-28 JSTOWE
+    - Unknown changes
 
-2004-03-02 20:28  jonathan
-
-	* MANIFEST, Makefile.PL, README, Screen.pm, test.pl: Put back in
-	  CVS
+1.01 2001-10-30 JSTOWE
+    - First release to CPAN
 
