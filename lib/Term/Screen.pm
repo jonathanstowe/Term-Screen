@@ -448,11 +448,11 @@ information.
 sub getch
 {
     my $this = shift;
-    my ( $c, $fn_flag ) = ( '', 0 );
+    my ( $c, $nc, $fn_flag ) = ( '', '', 0 );
     my $partial_fn_str = '';
 
     if ( $this->{IN} ) { $c = chop( $this->{IN} ); }
-    else { $c = getc(STDIN); }
+    else { sysread( STDIN, $c, 1 ); }
 
     $partial_fn_str = $c;
     while ( exists( $this->{KEYS}{$partial_fn_str} ) )
@@ -467,7 +467,11 @@ sub getch
         else    # wait for another key to see if were in FN yet
         {
             if ( $this->{IN} ) { $partial_fn_str .= chop( $this->{IN} ); }
-            else { $partial_fn_str .= getc(); }
+            else
+            {
+                sysread(STDIN, $nc, 1);
+                $partial_fn_str .= $nc;
+            }
         }
     }
     if ($fn_flag)    # seemed like a fn key
@@ -559,8 +563,9 @@ Clears input buffer and removes any incoming chars.
 sub flush_input
 {
     my $this = shift;
+    my $discard;
     $this->{IN} = '';
-    while ( $this->key_pressed() ) { getc(); }
+    while ( $this->key_pressed() ) { sysread(STDIN, $discard, 1); }
     return $this;
 }
 
