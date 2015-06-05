@@ -1,4 +1,4 @@
-Term::Screen version 1.01
+Term::Screen version 1.04
 =========================
 
 This module provides a simple interface to the terminal control features
@@ -45,12 +45,19 @@ SUPPORT
 Please contact the current maintainer of this module to report any bugs
 or suggest changes to this module.
 
-          Jonathan Stowe <jns@gellyfish.com>
+          Jonathan Stowe <jns@gellyfish.co.uk>
+
+The working source is  maintained at: 
+
+          https://github.com/jonathanstowe/Term-Screen
+
+Please feel free to fork, send pull requests and issues.
 
 COPYRIGHT AND LICENSE
 
 Copyright (c) Mark Kaehny    1996
               Jonathan Stowe 2001, 2005
+              Jonathan Stowe and others 2015
 
 
 This is free software it can be modified and distributed under the same
