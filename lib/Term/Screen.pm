@@ -112,8 +112,11 @@ sub new
 
 sub DESTROY
 {
-    eval { system('stty -raw echo 2>/dev/null'); };
+    my $rc = $?;
+    system('stty -raw echo 2>/dev/null'); 
+    $? = $rc;
 }
+
 
 =item term(term)
 
