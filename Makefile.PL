@@ -10,9 +10,10 @@ WriteMakefile(
     'NAME'		=> 'Term::Screen',
     'VERSION_FROM'	=> 'lib/Term/Screen.pm', 
     'PREREQ_PM'      => {
-        'Term::Cap' => 0,
-        'strict'    => 0,
-        'warnings'  => 0,
+        'Term::Cap'  => 0,
+        'Test::More' => 0,
+        'strict'     => 0,
+        'warnings'   => 0,
     },
 
     ($mm_ver >= 6.48
