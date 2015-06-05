@@ -285,6 +285,32 @@ sub reverse
     return $this;
 }
 
+=item curvis()
+
+The vs value from termcap - make cursor very visible
+
+=cut
+
+sub curvis
+{
+    my $this = shift;
+    $this->term()->Tputs( 'vs', 1, *STDOUT );
+    return $this;
+}
+
+=item curinvis()
+
+The vi value from termcap - make cursor invisible
+
+=cut
+sub curinvis
+{
+    my $this = shift;
+    $this->term()->Tputs( 'vi', 1, *STDOUT );
+    return $this;
+}
+
+
 =item clrscr()   	
 
 Clear the screen and home cursor
