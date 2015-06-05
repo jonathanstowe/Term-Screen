@@ -76,14 +76,14 @@ sub new
     # adjust OSPEED below to your system.
     if ( $^O ne "solaris" )
     {
-        eval { $ospeed = `stty speed`; };    # Unixish way to get OSpeed - works
+        eval { $ospeed = `stty speed 2>/dev/null`; };    # Unixish way to get OSpeed - works
     }
     else
     {                                        # on Linux, Gnuish ...
                                              # work around Solaris stty
         eval
         {
-            foreach (`stty`)
+            foreach (`stty 2>/dev/null`)
             {
                 if (/^speed (\d+)/) { $ospeed = $1; last }
             }
@@ -105,14 +105,14 @@ sub new
     $this->{ECHO} = 1;       # start off echoing
     $| = 1;                  # for output flush on writes
          # wrapped so inherited versions can call with different input codes
-    eval { system('stty raw -echo'); };    # turn on raw input
+    eval { system('stty raw -echo 2>/dev/null'); };    # turn on raw input
                                            # ignore errors
     return $this;
 }
 
 sub DESTROY
 {
-    eval { system('stty -raw echo'); };
+    eval { system('stty -raw echo 2>/dev/null'); };
 }
 
 =item term(term)
