@@ -23,6 +23,11 @@ And then run the rest of the procedure as usual - you will need to add
 that path to @INC as described in the FAQ or in the manpage for the 'lib'
 pragma.
 
+As of the 1.04 release the original test.pl has been moved to the examples
+directory as it wasn't really appropriate for a unit test.  You can of
+course still run it to check this behaves as expected on your platform.
+
+
 DEPENDENCIES
 
 This module depends on version 1.01 or greater of Term::Cap - whilst this

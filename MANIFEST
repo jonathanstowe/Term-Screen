@@ -2,5 +2,6 @@ MANIFEST
 README
 lib/Term/Screen.pm
 Makefile.PL
-test.pl
+example/test.pl
+t/01_basic.t
 Changes
