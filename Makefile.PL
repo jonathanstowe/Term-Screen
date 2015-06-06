@@ -1,10 +1,6 @@
 use ExtUtils::MakeMaker;
 
 my $mm_ver = $ExtUtils::MakeMaker::VERSION;
-if ($mm_ver =~ /_/) { # developer release?
-    $mm_ver = eval $mm_ver;
-    die $@ if $@;
-}
 
 WriteMakefile(
     'NAME'		=> 'Term::Screen',
@@ -12,15 +8,13 @@ WriteMakefile(
     'PREREQ_PM'      => {
         'Term::Cap'  => 0,
         'Test::More' => 0,
-        'strict'     => 0,
-        'warnings'   => 0,
     },
-
+    'LICENSE'  => 'perl',
+    'AUTHOR'   => ['Jonathan Stowe <jns@gellyfish.co.uk>'],
     ($mm_ver >= 6.48
         ? (MIN_PERL_VERSION => 5.006)
         : ()
     ),
-
     ($mm_ver <= 6.45
         ? ()
         : (META_MERGE => {
