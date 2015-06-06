@@ -105,7 +105,7 @@ sub new
     $this->{ECHO} = 1;       # start off echoing
     $| = 1;                  # for output flush on writes
          # wrapped so inherited versions can call with different input codes
-    eval { system('stty raw -echo 2>/dev/null'); };    # turn on raw input
+    eval { system('stty raw isig -echo 2>/dev/null'); };    # turn on raw input
                                            # ignore errors
     return $this;
 }
@@ -113,7 +113,7 @@ sub new
 sub DESTROY
 {
     my $rc = $?;
-    system('stty -raw echo 2>/dev/null'); 
+    system('stty -raw -isig echo 2>/dev/null'); 
     $? = $rc;
 }
 
