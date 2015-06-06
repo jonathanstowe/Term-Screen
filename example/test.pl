@@ -10,7 +10,7 @@
 
 require Term::Screen;
 
-$scr = new Term::Screen;
+$scr = Term::Screen->new();
 
 #test clear screen and output
 $scr->clrscr();

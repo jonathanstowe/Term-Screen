@@ -14,7 +14,7 @@ Term::Screen -  A Simple all perl Term::Cap based screen positioning module
 
    require Term::Screen;
 
-   $scr = new Term::Screen;
+   $scr = Term::Screen->new();
    unless ($scr) { die " Something's wrong \n"; }
    $scr->clrscr();
    $scr->at(5,3);
