@@ -8,9 +8,12 @@
 # distribution. See the Artistic License.
 #
 
+use strict;
+use warnings;
+
 require Term::Screen;
 
-$scr = Term::Screen->new();
+my $scr = Term::Screen->new();
 
 #test clear screen and output
 $scr->clrscr();
@@ -20,12 +23,13 @@ $scr->puts("Test series for Screen.pm module for perl5");
 $scr->at(2,3)->puts("1. Should be at row 2 col 3 (upper left is 0,0)");
 
 #test current position update
-$r = $scr->{'r'}; $c = $scr->{'c'};
+my $r = $scr->{'r'} || 0; 
+my $c = $scr->{'c'} || 0;
 $scr->at(3,0)->puts("2. Last position $r $c -- should be 2 50.");
 
 #test rows and cols ( should be updated for signal )
-$scr->at(4,0)->puts("3. Screen size: " . $scr->{'rows'} . " rows and " . 
-                                           $scr->{'cols'} . " columns.");
+$scr->at(4,0)->puts("3. Screen size: " . ($scr->{'rows'} || 0 ) . " rows and " . 
+                                           ( $scr->{'cols'} || 0 ) . " columns.");
 # test standout and normal test
 $scr->at(6,0);
 $scr->puts("4. Testing ")->reverse()->puts("reverse");
@@ -35,7 +39,7 @@ $scr->bold()->reverse()->puts("and both")->normal()->puts(" together.");
 
 # test clreol 
 # first put some stuff up
-$line = "0---------10--------20--------30--------40--------50--------60--------70-------";
+my $line = "0---------10--------20--------30--------40--------50--------60--------70-------";
 $scr->at(7,0)->puts("5. Testing clreol - " . 
                       "   The next 2 lines should end at col 20 and 30.");
 for (8 .. 10) {$scr->at($_,0)->puts($line);}
@@ -65,7 +69,7 @@ if ($scr->key_pressed(15)) { $scr->puts("KEY HIT!"); }
 # clear buffer out
 $scr->flush_input();
 $scr->at(21,0)->puts("Testing getch, Enter Key (q to quit): ")->at(21,40);
-$ch = '';
+my $ch = '';
 while(($ch = $scr->getch()) ne 'q') 
 {
   if (length($ch) == 1) 
