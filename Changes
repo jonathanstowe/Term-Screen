@@ -1,8 +1,13 @@
 Revision history for Perl module Term::Screen
 
-1.05 2015-06-?? JSTOWE
+1.05 2015-06-06 JSTOWE
     - Use sysread instead of getc() from ruittenb@cpan.org
-    - 
+    - Set cursor visibility as per patch javibarroso@gmail.com 
+    - Set isig/-isig to stty to allow signals as per javibarroso@gmail.com
+    - Simplify Makefile.PL slightly as metacpan appears to dislike it
+    - Use direct object notation for constructor in examples
+    - Use strict and warnings in examples/test.pl
+
 1.04 2015-06-05 JSTOWE
     - Now use strict and warnings, and drop use of vars.
     - Specified min version of perl in code and metadata
