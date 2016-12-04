@@ -1,5 +1,9 @@
 Revision history for Perl module Term::Screen
 
+1.06 2016-12-04 JSTOWE
+	- Fix for improper ordering of unexpected escapes from ruittenb@cpan.org
+	- Use direct object notation for Term::Cap constructor
+
 1.05 2015-06-06 JSTOWE
     - Use sysread instead of getc() from ruittenb@cpan.org
     - Set cursor visibility as per patch javibarroso@gmail.com 
