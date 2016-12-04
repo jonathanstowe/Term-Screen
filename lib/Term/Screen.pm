@@ -511,7 +511,7 @@ sub getch
             }
             else                                # buffer up the received chars
             {
-                $this->{IN} = CORE::reverse($partial_fn_str) . $this->{IN};
+                $this->{IN} .= CORE::reverse($partial_fn_str);
                 $c = chop( $this->{IN} );
                 $this->puts($c) if ( $this->{ECHO} && ( $c ne "\e" ) );
             }
