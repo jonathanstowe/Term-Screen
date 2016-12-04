@@ -90,7 +90,7 @@ sub new
         };
     }
     $ospeed = 9600 if ( !$ospeed || $@ );
-    my $term = Tgetent Term::Cap { 'TERM' => '', 'OSPEED' => $ospeed };
+    my $term = Term::Cap->Tgetent({ 'TERM' => '', 'OSPEED' => $ospeed });
 
     my $this = {};                           # create object
     bless $this, $classname;
