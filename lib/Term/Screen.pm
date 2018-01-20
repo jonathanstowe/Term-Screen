@@ -113,7 +113,7 @@ sub new
 sub DESTROY
 {
     my $rc = $?;
-    system('stty -raw -isig echo 2>/dev/null'); 
+    system('stty -raw echo 2>/dev/null'); 
     $? = $rc;
 }
 
